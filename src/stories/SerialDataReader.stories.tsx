@@ -1,6 +1,3 @@
-// eslint-disable-next-line no-unused-vars
-import React from "react"; // Import the React library
-
 // Import the Provider component from react-redux
 // This component makes the Redux store available to any nested components
 import { Provider } from "react-redux";

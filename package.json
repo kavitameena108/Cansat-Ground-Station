@@ -19,6 +19,7 @@
     "@react-three/drei": "^9.102.6",
     "@react-three/fiber": "^8.16.0",
     "@reduxjs/toolkit": "^2.2.3",
+    "@types/w3c-web-serial": "^1.0.6",
     "chart.js": "^3.7.0",
     "d3": "^7.9.0",
     "react": "^18.2.0",
@@ -35,8 +36,8 @@
     "@storybook/react": "^8.0.9",
     "@storybook/react-vite": "^8.0.9",
     "@storybook/test": "^8.0.9",
-    "@types/react": "^18.2.66",
-    "@types/react-dom": "^18.2.22",
+    "@types/react": "^18.3.2",
+    "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.1",
@@ -45,7 +46,8 @@
     "eslint-plugin-storybook": "^0.8.0",
     "prop-types": "^15.8.1",
     "storybook": "^8.0.9",
-    "vite": "^5.2.0",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11",
     "vite-plugin-svgr": "^4.2.0"
   }
 }

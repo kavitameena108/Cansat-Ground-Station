@@ -1,19 +1,12 @@
 // Import necessary libraries and components
-import React, { useState } from "react"; // React library and useState hook
 import { Box } from "@mui/material"; // Box component from Material UI
 import { Canvas } from "@react-three/fiber"; // Canvas component from react-three/fiber
 import { OrbitControls, useGLTF } from "@react-three/drei"; // OrbitControls and useGLTF from react-three/drei
 import { Euler } from "three"; // Euler from three.js
 
 // Define the Rocketmodel component
-// It takes one prop: initialOrientation
-const Rocketmodel = ({ initialOrientation }) => {
-  // Define the state for the orientation of the rocket
-  // The initial state is set to the initialOrientation prop or {x: 0, y: 0, z: 0}
-  const [orientation, setOrientation] = useState(
-    initialOrientation || { x: 0, y: 0, z: 0 }
-  );
-
+// It takes one prop: orientation
+const Rocketmodel = ({ orientation }) => {
   // Load the rocket model using the useGLTF hook
   const { scene } = useGLTF("rocket.glb");
 
