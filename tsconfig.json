@@ -27,7 +27,8 @@
     "@vitejs/plugin-react",
     "vite-plugin-svgr",
     "react",
-    "react-dom"
+    "react-dom",
+    "@types/w3c-web-serial"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
