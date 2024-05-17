@@ -3,7 +3,7 @@
 
 ![Line](https://user-images.githubusercontent.com/85225156/171937799-8fc9e255-9889-4642-9c92-6df85fb86e82.gif)
 
-## Tech Stack
+## 🌟Tech Stack
 Our website is built using the following technologies:
 
 - TypeScript:specifying the types of data being passed around within the code.
@@ -14,7 +14,7 @@ Our website is built using the following technologies:
 
 ![Line](https://user-images.githubusercontent.com/85225156/171937799-8fc9e255-9889-4642-9c92-6df85fb86e82.gif)
 
-## What you can Contribute
+## 🌟What you can Contribute 🤔
 There are several ways you can contribute to this project:
 
 - Reporting bugs and issues
@@ -26,7 +26,7 @@ There are several ways you can contribute to this project:
 
 ![Line](https://user-images.githubusercontent.com/85225156/171937799-8fc9e255-9889-4642-9c92-6df85fb86e82.gif)
 
-## How to Contribute?
+## 🌟How to Contribute?
 
 - Drop a Star ⭐ in this repo
 - Take a look at the existing [Issues](https://github.com/Gagan-Space/Cansat-Ground-Station/issues). 
@@ -42,7 +42,7 @@ There are several ways you can contribute to this project:
 
 ![Line](https://user-images.githubusercontent.com/85225156/171937799-8fc9e255-9889-4642-9c92-6df85fb86e82.gif)
 
-## Submitting a Pull Request
+## Submitting a Pull Request 🚀
 
 **1.** Fork the repository and clone it to your local machine.
 **2.** Create a new branch for your feature or bug fix:
