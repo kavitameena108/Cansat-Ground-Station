@@ -8,6 +8,8 @@ import Altimeter from "./components/InstrumentCluster/Altimeter/Altimeter";
 import VerticalSpeed from "./components/InstrumentCluster/VerticalSpeed/VerticalSpeed";
 import Rocketmodel from "./components/Rocketmodel/Rocketmodel";
 import Heading from "./components/InstrumentCluster/Heading/Heading";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Analysis from "./components/Analysis/UI/Analysis";
 import "./App.css";
 
 // Define the App component
@@ -17,29 +19,42 @@ const App = () => {
   // Render the App component
   return (
     <>
-      <div>
-        <Navbar />
-      </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-        id="Main_container"
-      >
-        <Rocketmodel />
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ display: "flex" }}>
-            <AirSpeed />
-            <Altimeter />
-          </div>
-          <div style={{ display: "flex" }}>
-            <VerticalSpeed />
-            <Heading pitch={telemetryData.tiltX} roll={telemetryData.tiltY} />
-          </div>
+      <BrowserRouter>
+        <div>
+          <Navbar />
         </div>
-      </div>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+                id="Main_container"
+              >
+                <Rocketmodel />
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                  <div style={{ display: "flex" }}>
+                    <AirSpeed />
+                    <Altimeter />
+                  </div>
+                  <div style={{ display: "flex" }}>
+                    <VerticalSpeed />
+                    <Heading
+                      pitch={telemetryData.tiltX}
+                      roll={telemetryData.tiltY}
+                    />
+                  </div>
+                </div>
+              </div>
+            }
+          />
+          <Route path="/analysis" element={<Analysis />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 };
