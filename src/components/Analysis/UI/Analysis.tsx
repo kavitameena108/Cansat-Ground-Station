@@ -1,4 +1,4 @@
-import { Line } from "react-chartjs-2";
+// Import necessary modules and components
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -10,12 +10,14 @@ import {
   Legend,
   TimeScale,
 } from "chart.js";
-import { Box, Button, Card, Input, Typography } from "@mui/material";
+import { Button, Input, Typography } from "@mui/material";
 import { useSelector } from "react-redux";
 import { useState } from "react";
-import Papa from "papaparse";
 import "chartjs-adapter-date-fns";
+import PloteGraph from "./PloteGraph";
+import { handleFileChange, handleFileUpload } from "../Analysis";
 
+// Register the required components with Chart.js
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -28,7 +30,9 @@ ChartJS.register(
 );
 
 const Analysis = () => {
+  // State to hold the uploaded file
   const [file, setFile] = useState(null);
+  // State to hold the chart data
   const [chartData, setChartData] = useState({
     labels: [],
     datasets: [
@@ -40,56 +44,40 @@ const Analysis = () => {
       },
     ],
   });
+  // Retrieve the launch state from the Redux store
   const launch = useSelector((state) => state.launch.value);
 
-  const handleFileChange = (e) => {
-    setFile(e.target.files[0]);
-  };
+  // Process the parsed data and update the chart data
+  const onDataLoaded = (data: any[]) => {
+    const time = data.map((item) => new Date(item.gpsTime * 1000)); // Convert gpsTime to Date object
+    const altitudes = data.map((item) => item.altitude); // Extract altitudes
 
-  const handleFileUpload = () => {
-    if (file) {
-      Papa.parse(file, {
-        header: true,
-        dynamicTyping: true,
-        complete: (results) => {
-          onDataLoaded(results.data);
-        },
-        error: (e) => {
-          console.log("Error occurred while parsing: ", e);
-        },
-      });
-      setFile(null);
-    }
-  };
-
-  const onDataLoaded = (data) => {
-    const time = data.map((item) => new Date(item.gpsTime * 1000));
-    const altitudes = data.map((item) => item.altitude);
-
+    // Update the chart data state
     setChartData({
-      labels: altitudes,
+      labels: altitudes, // Set altitudes as labels on the x-axis
       datasets: [
         {
-          label: "Time",
-          data: time,
-          borderColor: "rgb(255, 0, 0)",
-          tension: 0.1,
+          label: "Time", // Set the label for the dataset
+          data: time, // Set time as data points
+          borderColor: "rgb(255, 0, 0)", // Line color
+          tension: 0.1, // Line tension
         },
       ],
     });
   };
 
+  // Define chart options
   const options = {
     responsive: true,
     scales: {
       x: {
         title: {
           display: true,
-          text: "Altitude",
+          text: "Altitude", // Label for the x-axis
         },
       },
       y: {
-        type: "time",
+        type: "time", // Use time scale for y-axis
         time: {
           unit: "minute",
           stepSize: 1,
@@ -102,7 +90,7 @@ const Analysis = () => {
         },
         title: {
           display: true,
-          text: "Time",
+          text: "Time", // Label for the y-axis
         },
       },
     },
@@ -110,8 +98,8 @@ const Analysis = () => {
 
   return !launch ? (
     <>
+      {/* File input for uploading CSV files */}
       <Input
-        variant="contained"
         sx={{
           margin: 4,
           backgroundColor: "white",
@@ -122,9 +110,9 @@ const Analysis = () => {
           },
         }}
         type="file"
-        accept=".csv"
-        onChange={handleFileChange}
+        onChange={(e) => handleFileChange(e, setFile)}
       />
+      {/* Button to trigger file upload and parsing */}
       <Button
         variant="contained"
         sx={{
@@ -135,34 +123,16 @@ const Analysis = () => {
           },
           minWidth: "100px",
         }}
-        onClick={handleFileUpload}
+        onClick={(e) => handleFileUpload(e, file, onDataLoaded, setFile)}
       >
         Upload and Parse CSV
       </Button>
-      <Box
-        sx={{
-          minWidth: "500",
-          height: "500",
-          margin: 4,
-        }}
-      >
-        <Card
-          variant="outlined"
-          style={{
-            margin: 20,
-            height: 600,
-            alignItems: "center",
-            display: "flex",
-            flexDirection: "column",
-            borderRadius: "10px",
-          }}
-        >
-          <Line options={options} data={chartData}></Line>
-        </Card>
-      </Box>
+      {/* Render the chart using PloteGraph component */}
+      <PloteGraph options={options} chartData={chartData}></PloteGraph>
     </>
   ) : (
     <div>
+      {/* Message to display when no data is available */}
       <Typography
         sx={{
           display: "flex",
