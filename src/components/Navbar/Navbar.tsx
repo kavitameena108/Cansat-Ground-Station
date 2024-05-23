@@ -9,6 +9,7 @@ import StartMission from "../StartMission/UI/StartMission";
 
 // Import the necessary components from the Material UI library
 import { AppBar, Toolbar, Box } from "@mui/material";
+import AnalysisButton from "../Analysis/UI/AnalysisButton";
 
 // Define the Navbar component
 const Navbar = () => {
@@ -29,6 +30,10 @@ const Navbar = () => {
 
           <Box sx={{ ml: 2 }}>
             <StartMission />
+          </Box>
+
+          <Box sx={{ ml: 2 }}>
+            <AnalysisButton />
           </Box>
 
           <Box sx={{ ml: 2 }}>
