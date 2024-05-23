@@ -72,6 +72,28 @@ To start the development server, run:
 npm run dev
 ```
 
+
+### Installation with Docker
+
+To start project locally through docker, run:
+
+1. After clonning the repository change directory to cansat-ground-station
+   ```sh
+   cd cansat-ground-station
+   ```
+2. Build Dockerfile:
+   ```sh
+   docker build -t gagan .    
+   ```
+3. Run the image:
+   ```sh
+   docker run -p 5173:5173 gagan
+   ```
+4. Server is started on this url ,if followed all steps correctly:
+   ```sh
+   http://localhost:5173/
+   ```
+
 ## Contributing
 
 If you'd like to contribute to this project, please follow these guidelines:
