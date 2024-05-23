@@ -2,8 +2,10 @@
 import Papa from "papaparse";
 
 // Handle file selection
-export const handleFileChange = (e, setFile: any) => {
-    setFile(e.target.files[0]);
+export const handleFileChange = (e: any, setFile: any, setFileName: any) => {
+    const selectedFile = e.target.files ? e.target.files[0] : null;
+    setFile(e.target.files ? e.target.files[0] : null);
+    setFileName(selectedFile ? selectedFile.name : 'No file chosen');
 };
 
 // Handle file upload and parse the CSV file using PapaParse

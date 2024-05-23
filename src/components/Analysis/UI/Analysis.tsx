@@ -10,7 +10,7 @@ import {
   Legend,
   TimeScale,
 } from "chart.js";
-import { Button, Input, Typography } from "@mui/material";
+import { Box, Button, Input, Typography } from "@mui/material";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 import "chartjs-adapter-date-fns";
@@ -31,104 +31,61 @@ ChartJS.register(
 
 const Analysis = () => {
   // State to hold the uploaded file
-  const [file, setFile] = useState(null);
-  // State to hold the chart data
-  const [chartData, setChartData] = useState({
-    labels: [],
-    datasets: [
-      {
-        label: "Altitude",
-        data: [],
-        borderColor: "rgb(255, 0, 0)",
-        tension: 0.1,
-      },
-    ],
-  });
+  const [file, setFile] = useState<File | null>(null);
+  const [fileName, setFileName] = useState<string>("No file chosen");
+  const [xAxis, setxAxis] = useState<any[] | null>(null);
+  const [yAxis, setyAxis] = useState<Date[] | null>(null);
   // Retrieve the launch state from the Redux store
   const launch = useSelector((state) => state.launch.value);
 
   // Process the parsed data and update the chart data
   const onDataLoaded = (data: any[]) => {
-    const time = data.map((item) => new Date(item.gpsTime * 1000)); // Convert gpsTime to Date object
-    const altitudes = data.map((item) => item.altitude); // Extract altitudes
-
-    // Update the chart data state
-    setChartData({
-      labels: altitudes, // Set altitudes as labels on the x-axis
-      datasets: [
-        {
-          label: "Time", // Set the label for the dataset
-          data: time, // Set time as data points
-          borderColor: "rgb(255, 0, 0)", // Line color
-          tension: 0.1, // Line tension
-        },
-      ],
-    });
-  };
-
-  // Define chart options
-  const options = {
-    responsive: true,
-    scales: {
-      x: {
-        title: {
-          display: true,
-          text: "Altitude", // Label for the x-axis
-        },
-      },
-      y: {
-        type: "time", // Use time scale for y-axis
-        time: {
-          unit: "minute",
-          stepSize: 1,
-          tooltipFormat: "PP p",
-          displayFormats: {
-            minute: "MMM dd, yyyy HH:mm",
-            hour: "MMM dd, yyyy HH:mm",
-            day: "MMM dd, yyyy",
-          },
-        },
-        title: {
-          display: true,
-          text: "Time", // Label for the y-axis
-        },
-      },
-    },
+    setxAxis(data.map((item) => item.altitude));
+    setyAxis(data.map((item) => new Date(item.gpsTime * 1000)));
   };
 
   return !launch ? (
     <>
       {/* File input for uploading CSV files */}
-      <Input
-        sx={{
-          margin: 4,
-          backgroundColor: "white",
-          color: "black",
-          borderRadius: "5px",
-          "&:hover": {
-            backgroundColor: "#f8f8ff",
-          },
-        }}
-        type="file"
-        onChange={(e) => handleFileChange(e, setFile)}
-      />
-      {/* Button to trigger file upload and parsing */}
-      <Button
-        variant="contained"
-        sx={{
-          backgroundColor: "white",
-          color: "black",
-          "&:hover": {
-            backgroundColor: "#f8f8ff",
-          },
-          minWidth: "100px",
-        }}
-        onClick={(e) => handleFileUpload(e, file, onDataLoaded, setFile)}
-      >
-        Upload and Parse CSV
-      </Button>
+      <Box sx={{ display: "flex", alignItems: "center", gap: 2, margin: 3 }}>
+        <Button
+          variant="contained"
+          component="label"
+          sx={{
+            backgroundColor: "white",
+            color: "black",
+            "&:hover": {
+              backgroundColor: "#f8f8ff",
+            },
+          }}
+        >
+          Choose File
+          <input
+            type="file"
+            hidden
+            onChange={(e) => handleFileChange(e, setFile, setFileName)}
+            accept=".csv"
+          />
+        </Button>
+        <Typography>{fileName}</Typography>
+        {/* Button to trigger file upload and parsing (It is set hidden by default, till file is uploaded)*/}
+        <Button
+          variant="contained"
+          sx={{
+            backgroundColor: "white",
+            color: "black",
+            "&:hover": {
+              backgroundColor: "#f8f8ff",
+            },
+          }}
+          onClick={(e) => handleFileUpload(e, file, onDataLoaded, setFile)}
+          disabled={!file}
+        >
+          Upload and Parse CSV
+        </Button>
+      </Box>
       {/* Render the chart using PloteGraph component */}
-      <PloteGraph options={options} chartData={chartData}></PloteGraph>
+      <PloteGraph xAxis={xAxis} yAxis={yAxis}></PloteGraph>
     </>
   ) : (
     <div>
