@@ -1,9 +1,0 @@
-image:
-  file: Dockerfile
-
-tasks:
-  - init: |
-      echo "Initializing workspace"
-    command: |
-      npm install
-      npm run dev
