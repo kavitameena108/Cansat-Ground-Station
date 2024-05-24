@@ -4,9 +4,10 @@
     <img src="https://img.shields.io/github/v/release/Gagan-Space/Cansat-Ground-Station" alt="GitHub Release">
     <img src="https://img.shields.io/github/license/Gagan-Space/Cansat-Ground-Station" alt="GitHub License">
     <img src="https://img.shields.io/github/stars/Gagan-Space/Cansat-Ground-Station?style=flat" alt="GitHub Repo stars">
+    <img alt="GitHub forks" src="https://img.shields.io/github/forks/Gagan-Space/Cansat-Ground-Station?style=flat">
+    <img alt="GitHub Issues or Pull Requests" src="https://img.shields.io/github/issues/Gagan-Space/Cansat-Ground-Station">
     <a href="https://gitpod.io/#https://github.com/Gagan-Space/Cansat-Ground-Station"><img src="https://img.shields.io/badge/Gitpod-ready--to--code-blue?style=flat&logo=gitpod" alt="Gitpod"></a>
 </div>
-
 
 # CanSat Ground Station
 
@@ -46,14 +47,19 @@ Before you begin, ensure you have met the following requirements:
 ### Installation
 
 1. Clone the repository to your local machine:
+
    ```sh
    https://github.com/Gagan-Space/Cansat-Ground-Station.git
    ```
+
 2. cd cansat-ground-station
+
    ```sh
    cd cansat-ground-station
    ```
+
 3. Install dependencies:
+
    ```sh
    npm install
    ```
@@ -72,18 +78,24 @@ If you'd like to contribute to this project, please follow these guidelines:
 
 1. Fork the repository and clone it to your local machine.
 2. Create a new branch for your feature or bug fix:
+
    ```sh
    git checkout -b feature/my-feature
    ```
+
 3. Make your changes and ensure they follow the project's coding style.
 4. Commit your changes with descriptive commit messages:
+
    ```sh
    git commit -am "Add a new feature"
    ```
+
 5. Push your branch to your fork:
+
    ```sh
    git push origin feature/my-feature
    ```
+
 6. Finally, open a pull request on the original repository's main branch.
 
 ## License
