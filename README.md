@@ -1,16 +1,10 @@
 <div align="center">
-    <a href="https://github.com/Gagan-Space/Cansat-Ground-Station/actions/workflows/build.yaml">
-        <img src="https://github.com/Gagan-Space/Cansat-Ground-Station/actions/workflows/build.yaml/badge.svg" alt="Build">
-    </a>
-    <a href="https://github.com/Gagan-Space/Cansat-Ground-Station/actions/workflows/mkdocs.yaml">
-        <img src="https://github.com/Gagan-Space/Cansat-Ground-Station/actions/workflows/mkdocs.yaml/badge.svg" alt="Documentation">
-    </a>
+    <a href="https://github.com/Gagan-Space/Cansat-Ground-Station/actions/workflows/build.yaml"><img src="https://github.com/Gagan-Space/Cansat-Ground-Station/actions/workflows/build.yaml/badge.svg" alt="Build"></a>
+    <a href="https://github.com/Gagan-Space/Cansat-Ground-Station/actions/workflows/mkdocs.yaml"><img src="https://github.com/Gagan-Space/Cansat-Ground-Station/actions/workflows/mkdocs.yaml/badge.svg" alt="Documentation"></a>
     <img src="https://img.shields.io/github/v/release/Gagan-Space/Cansat-Ground-Station" alt="GitHub Release">
     <img src="https://img.shields.io/github/license/Gagan-Space/Cansat-Ground-Station" alt="GitHub License">
     <img src="https://img.shields.io/github/stars/Gagan-Space/Cansat-Ground-Station?style=flat" alt="GitHub Repo stars">
-    <a href="https://gitpod.io/#https://github.com/Gagan-Space/Cansat-Ground-Station">
-        <img src="https://img.shields.io/badge/Gitpod-ready--to--code-blue?style=flat-square&logo=gitpod" alt="Gitpod">
-    </a>
+    <a href="https://gitpod.io/#https://github.com/Gagan-Space/Cansat-Ground-Station"><img src="https://img.shields.io/badge/Gitpod-ready--to--code-blue?style=flat&logo=gitpod" alt="Gitpod"></a>
 </div>
 
 
