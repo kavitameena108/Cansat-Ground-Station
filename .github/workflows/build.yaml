@@ -23,7 +23,7 @@ jobs:
           node-version: ""
 
       - name: Install dependencies
-        uses: bahmutov/yarn-install@v1
+        uses: bahmutov/npm-install@v1
 
       - name: Build project
         run: yarn run build
