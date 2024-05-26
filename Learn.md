@@ -26,6 +26,18 @@ Three.js is a popular JavaScript library used to create and display 3D graphics 
 
 Storybook is an open-source tool for developing UI components in isolation for React, Vue, and Angular. It allows us to create and showcase interactive UI components independently from the application's business logic. We're using Storybook for unit testing our UI components, ensuring they function correctly and look as expected in various scenarios.
 
+  #### Docker
+
+Docker is a platform that enables developers to automate the deployment of applications inside lightweight, portable containers. We use Docker to ensure our application runs consistently across different environments. 
+
+#### Docker-Compose
+
+Docker Compose is a tool for defining and running multi-container Docker applications. We use Docker Compose to configure and run our development environment, ensuring all necessary services are started with a single command. 
+
+#### DevContainer 
+
+DevContainer is a feature of Visual Studio Code that allows developers to open projects inside containers, providing a consistent development environment. We use DevContainer to ensure all contributors work with the same dependencies and configurations.
+
 ## Getting Started
 
 ### 1. Install Node:
@@ -112,3 +124,40 @@ Once the dependencies are installed, you can start the Vite development server b
 yarn run dev
 ```
 This command will start the Vite development server, and you should see output indicating that the server is running. By default, Vite will serve your React application on `http://localhost:3000`.
+
+## Using DevContainer and Docker Compose
+
+### Setting Up the DevContainer
+
+To ensure a consistent development environment, we use Visual Studio Code's DevContainer feature. Follow these steps to set up and use the DevContainer:
+
+1. **Install Docker**:
+    - Download and install Docker from the [official website](https://www.docker.com/get-started).
+
+2. **Open Project in VS Code**:
+    - Open the CanSat Ground Station project in Visual Studio Code.
+
+3. **Reopen in Container**:
+    - Press `F1` to open the command palette.
+    - Type `Remote-Containers: Reopen in Container` and select it.
+   - When you open the project in VS Code, you should see a popup stating that "This folder contains a .devcontainer configuration file" with an option to reopen the project in the DevContainer.
+
+VS Code will then build and open the project inside a Docker container, providing a consistent development environment.
+
+### Using Docker Compose
+
+To run the project using Docker Compose, follow these steps:
+
+1. **Install Docker Compose**:
+    - Ensure you have Docker Compose installed. It's included with Docker Desktop.
+
+2. **Build and Start Containers**:
+    - In your terminal, navigate to the project directory.
+    - Run the following command to build and start the containers:
+
+    ```bash
+    docker-compose up --build
+    ```
+
+3. **Access the Application**:
+    - Once the containers are up and running, you can access the application at `http://localhost:5173/`.
