@@ -3,7 +3,8 @@ name: Docker Build Test
 on:
   push:
     branches:
-      - main
+      - main   
+  pull_request_target:
 
 jobs:
   build:
