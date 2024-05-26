@@ -26,26 +26,15 @@ Three.js is a popular JavaScript library used to create and display 3D graphics 
 
 Storybook is an open-source tool for developing UI components in isolation for React, Vue, and Angular. It allows us to create and showcase interactive UI components independently from the application's business logic. We're using Storybook for unit testing our UI components, ensuring they function correctly and look as expected in various scenarios.
 
-
-
   #### Docker
-
-
 
 Docker is a platform that enables developers to automate the deployment of applications inside lightweight, portable containers. We use Docker to ensure our application runs consistently across different environments. 
 
-
 #### Docker-Compose
-
-
 
 Docker Compose is a tool for defining and running multi-container Docker applications. We use Docker Compose to configure and run our development environment, ensuring all necessary services are started with a single command. 
 
-
-
 #### DevContainer 
-
-
 
 DevContainer is a feature of Visual Studio Code that allows developers to open projects inside containers, providing a consistent development environment. We use DevContainer to ensure all contributors work with the same dependencies and configurations.
 
