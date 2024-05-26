@@ -46,7 +46,7 @@ Telemetry data collected from the CanSat payload is transmitted to the ground st
 
 Before you begin, ensure you have met the following requirements:
 
-- Node.js and npm installed on your local machine.
+- Node.js, npm and yarn installed on your local machine.
 - Git installed on your local machine.
 
 ### Installation
@@ -61,7 +61,7 @@ Before you begin, ensure you have met the following requirements:
    ```
 3. Install dependencies:
    ```sh
-   npm install
+   yarn install
    ```
 
 ### Running the Development Server
@@ -69,7 +69,7 @@ Before you begin, ensure you have met the following requirements:
 To start the development server, run:
 
 ```sh
-npm run dev
+yarn run dev
 ```
 
 ## Contributing
