@@ -75,7 +75,7 @@ Storybook provides a convenient way to develop and test UI components in isolati
 Before running Storybook, ensure that you have all the necessary dependencies installed. If you haven't already, install the project dependencies by running:
 
 ```bash
-npm install
+yarn install
 ```
 
 ### 2. Start Storybook
@@ -83,7 +83,7 @@ npm install
 To start Storybook, run the following command in your terminal:
 
 ```bash
-npm run storybook
+yarn run storybook
 ```
 
 This command will start the Storybook development server, and you should see output indicating that Storybook is running.
@@ -101,7 +101,7 @@ Vite is a blazing-fast development server and build tool for web projects, inclu
 Navigate to your project directory using a terminal or command prompt, and install the necessary dependencies by running:
 
 ```bash
-npm install
+yarn install
 ```
 This command will install all the required dependencies listed in your package.json file, including Vite.
 
@@ -109,6 +109,6 @@ This command will install all the required dependencies listed in your package.j
 Once the dependencies are installed, you can start the Vite development server by running the following command:
 
 ```bash
-npm run dev
+yarn run dev
 ```
 This command will start the Vite development server, and you should see output indicating that the server is running. By default, Vite will serve your React application on `http://localhost:3000`.
