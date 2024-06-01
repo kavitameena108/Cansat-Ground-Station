@@ -6,7 +6,7 @@
    ## Table of Contents
   - [Introduction](#introduction)
   - [Data Format](#data-format)
-  - [Tech Stack](#TechStack)
+  - [Tech Stack](#Tech-Stack)
   - [Getting Started](#getting-started)
   - [Installation](#installation)
   - [Contributing](#contributing)
@@ -170,9 +170,7 @@ Happy coding!
 <div align = "center">
  <h3>Thank you for contributing to our repository</h3>
 
-![Contributors]https://github.com/Gagan-Space/Cansat-Ground-Station/graphs/contributors
+![Contributors](https://github.com/Gagan-Space/Cansat-Ground-Station/graphs/contributors)
 ### Show some ❤️ by starring this awesome repository!
 
 </div>
-<p align="right">{<a href="#top">Back to top</a>}</p
-
