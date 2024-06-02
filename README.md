@@ -1,4 +1,20 @@
-<div align="center">
+    
+   # ConSat Ground Station
+
+   Welcome to the CanSat Ground Station project! This project aims to develop a comprehensive ground station for monitoring and controlling a CanSat mission using modern web technologies. In this introduction, we'll provide an overview of the key technologies and tools used in this project.
+
+   ## Table of Contents
+  - [Introduction](#introduction)
+  - [Data Format](#data-format)
+  - [Tech Stack](#Tech-Stack)
+  - [Getting Started](#getting-started)
+  - [Installation](#installation)
+  - [Contributing](#contributing)
+  - [Documentation](#-documentation)
+  - [License](#license)
+
+
+   <div align="center">
     <a href="https://discord.gg/Wwhjfx6dJG"><img src="https://img.shields.io/discord/1013056365884878858?color=%235865F2&logo=discord&logoColor=%23FFFFFF&style=plastic" alt="Discord"></a>
     <a href="https://github.com/Gagan-Space/Cansat-Ground-Station/actions/workflows/build.yaml"><img src="https://github.com/Gagan-Space/Cansat-Ground-Station/actions/workflows/build.yaml/badge.svg" alt="Build"></a>
     <a href="https://github.com/Gagan-Space/Cansat-Ground-Station/actions/workflows/mkdocs.yaml"><img src="https://github.com/Gagan-Space/Cansat-Ground-Station/actions/workflows/mkdocs.yaml/badge.svg" alt="Documentation"></a>
@@ -10,7 +26,7 @@
     <a href="https://gitpod.io/#https://github.com/Gagan-Space/Cansat-Ground-Station"><img src="https://img.shields.io/badge/Gitpod-ready--to--code-blue?style=flat&logo=gitpod" alt="Gitpod"></a>
 </div>
 
-# CanSat Ground Station
+## Introduction
 
 Welcome to the CanSat Ground Station project! This project aims to provide a ground station software for CanSat projects using Vite and React.
 
@@ -35,6 +51,9 @@ Telemetry data collected from the CanSat payload is transmitted to the ground st
   - tiltY (4 byte)
   - rotZ (4 byte)
 - **Byte[48] Data Footer, 0x00**
+
+## Tech Stack
+- React, Vite,  Redux, Three.js, Storybooks, Docker, Dockeer-Compose, DevContainer
 
 ## Getting Started
 
@@ -121,6 +140,37 @@ If you'd like to contribute to this project, please follow these guidelines:
 
 6. Finally, open a pull request on the original repository's main branch.
 
+#### Contibuting Guidelines 
+  We believe in the power of collaboration. If you have ideas to improve Consat-Ground-Station , feel free to contribute! Check out our [Contribution Guidelines]https://github.com/Gagan-Space/Cansat-Ground-Station/blob/main/CONTRIBUTING.md to get started.
+
+### 📄Documentation
+
+Explore our comprehensive documentation in the [LEARN.md]https://github.com/Gagan-Space/Cansat-Ground-Station/blob/main/Learn.md file, which serves as a detailed guide to understanding and contributing to Consat-Ground-Station. This document covers various aspects of the project, including setup instructions, architecture overview, and contribution guidelines. We recommend referring to this documentation to gain a deeper insight into UniCollab and make meaningful contributions to its development.
+
+
 ## License
 
 This project is licensed under the GNU General Public License v3.0 (GPL-3.0). See the [LICENSE](LICENSE) file for details.
+
+### Message From PA
+
+Welcome to Consat-Ground-Station!
+
+We're glad you're here and excited for you to explore our project. Whether you're checking out the code, contributing to the project, or providing feedback, your presence and input are invaluable.
+
+Feel free to dive in, get involved, and make Consat-Ground-Station even better!
+🌟 **Enjoy exploring the world of tech with Tech Stuffs!**
+
+Happy coding!
+
+
+<div>
+ 
+<h2 align = "center">Our Contributors ❤️</h2>
+<div align = "center">
+ <h3>Thank you for contributing to our repository</h3>
+
+![Contributors](https://github.com/Gagan-Space/Cansat-Ground-Station/graphs/contributors)
+### Show some ❤️ by starring this awesome repository!
+
+</div>
