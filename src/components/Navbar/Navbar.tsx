@@ -16,11 +16,11 @@ const Navbar = () => {
   return (
     // The AppBar component from Material UI
     // It is positioned statically and has a custom background color
-    <AppBar position="static" style={{ backgroundColor: "#1a1a1a" }}>
+    <AppBar position="static" style={{ backgroundColor: "" }}>
       <Toolbar>
         {/* A Box component from Material UI */}
         {/* It is displayed as a flex container, with its items aligned in the center and taking up the full width */}
-        <Box sx={{ display: "flex", alignItems: "center", width: "100%" }}>
+        <Box sx={{display: "flex", alignItems: "center", width: "100%" }}>
           <img className="logo-container" src="gagan.png" alt="Logo" />
 
           {/*  A Box component from Material UI */}

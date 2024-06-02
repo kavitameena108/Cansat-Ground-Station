@@ -1,6 +1,24 @@
-#Main_container{
-    display: flex;
+#Main_container {
+	/* add animation and gradient in background */
+	background: linear-gradient(185deg, rgba(4, 197, 222, 1) 0%, rgba(162, 133, 212, 1) 50%, rgba(6, 75, 249, 1) 100%);
+	
+	-webkit-animation:zoom-in-out 1.5s ease-in-out 0s 1 normal;
+-moz-animation:zoom-in-out 1.5s ease-in-out 0s 1 normal;
+-ms-animation:zoom-in-out 1.5s ease-in-out 0s 1 normal;
+animation:zoom-in-out 1.5s ease-in-out 0s 1 normal;
 }
+
+@-webkit-keyframes zoom-in-out {
+    0%{ -webkit-transform: scale(1); transform: scale(1); }
+    50%{ -webkit-transform: scale(1.2); transform: scale(1.2); }
+    100%{ -webkit-transform: scale(1); transform: scale(1); }
+    }
+    
+    @keyframes zoom-in-out {
+    0%{ -ms-transform: scale(1); transform: scale(1); }
+    50%{ -ms-transform: scale(1.2); transform: scale(1.2); }
+    100%{ -ms-transform: scale(1); transform: scale(1); }
+    }
 @media (max-width:1200px) {
     #Main_container{
         display: flex;
