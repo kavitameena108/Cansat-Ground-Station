@@ -47,5 +47,11 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
+nav:
+  - Home: index.md
+  - Getting Started: gettingstarted.md
+  - Tutorials: tutorial.md
+  - FAQs: faq.md
+
 copyright: |
   &copy; 2024 <a href="https://github.com/Gagan-Space/Cansat-Ground-Station"  target="_blank" rel="noopener">Gagan-Space</a>
