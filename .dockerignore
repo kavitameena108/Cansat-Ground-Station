@@ -1,0 +1,48 @@
+.github
+.git
+node_modules
+.gitignore
+.Readme.md
+package-lock.json
+.dockerignore
+License
+Code_of_Conduct.md
+Contributing.md
+Learn.md
+
+
+# Ignore node_modules directory since it will be created during docker build
+node_modules
+
+# Ignore build output directories
+dist
+build
+
+# Ignore test directories
+testing
+
+# Ignore documentation and config files not needed in the final image
+.github
+.storybook
+mkdocs
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+LICENSE
+Learn.md
+README.md
+
+# Ignore TypeScript config files if you are not building TypeScript inside Docker
+tsconfig.json
+tsconfig.node.json
+
+# Ignore other unnecessary config or environment files
+.eslintrc.cjs
+.gitignore
+.vscode
+*.log
+.env
+
+# Any other temporary files or directories
+tmp
+*.tmp
+*.swp

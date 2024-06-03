@@ -1,4 +1,4 @@
-export const appendtoCSV = (newData) => {
+export const appendtoCSV = (newData: string) => {
   let csvContent = sessionStorage.getItem("csvData") || "";
   const csvRow = Object.values(newData).join(",") + "\n";
   csvContent += csvRow;

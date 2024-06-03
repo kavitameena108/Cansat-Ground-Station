@@ -1,5 +1,4 @@
 // Import necessary libraries and components
-import React from "react"; // React library
 import Box from "@mui/material/Box"; // Box component from Material UI
 import MenuItem from "@mui/material/MenuItem"; // MenuItem component from Material UI
 import Select from "@mui/material/Select"; // Select component from Material UI
