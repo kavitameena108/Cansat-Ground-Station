@@ -1,5 +1,5 @@
     
-   # ConSat Ground Station
+   # CanSat Ground Station
 
    Welcome to the CanSat Ground Station project! This project aims to develop a comprehensive ground station for monitoring and controlling a CanSat mission using modern web technologies. In this introduction, we'll provide an overview of the key technologies and tools used in this project.
 
