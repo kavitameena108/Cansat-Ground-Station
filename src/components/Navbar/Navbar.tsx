@@ -11,6 +11,8 @@ import StartMission from "../StartMission/UI/StartMission";
 import { AppBar, Toolbar, Box } from "@mui/material";
 import AnalysisButton from "../Analysis/UI/AnalysisButton";
 
+import ThemeToggleButton from "../ThemeProvider/UI/ThemeToggleButton"
+
 // Define the Navbar component
 const Navbar = () => {
   // Return the JSX for the Navbar component
@@ -47,6 +49,11 @@ const Navbar = () => {
           <Box sx={{ ml: 2 }}>
             <ConnectButton />
           </Box>
+
+          <Box sx={{ ml: 2 }}>
+            <ThemeToggleButton />
+          </Box>
+
         </Box>
       </Toolbar>
     </AppBar>
